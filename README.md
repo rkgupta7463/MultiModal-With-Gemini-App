@@ -1,1 +1,1 @@
-MultiModal with Gemini Application (latest multimodal model)
+## MultiModal with Gemini Application (latest multimodal model)
