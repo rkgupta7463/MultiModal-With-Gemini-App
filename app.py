@@ -24,7 +24,7 @@ def img_response(img,prompt=None):
 
 # ============================ Streamlit Application functions && codes ================================= #
 def main():
-    st.title("Generative AI with MultiModal")
+    st.title("TechknowGPT with MultiModal")
     st.sidebar.header("GenAI with MultiModality Model")
     option = st.sidebar.selectbox(
             "How would you like to be proceed?",
