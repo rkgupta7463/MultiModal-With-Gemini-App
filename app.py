@@ -36,7 +36,7 @@ def main():
     # Get user input
     if option=="Text":
         # user_input = st.text_input("Ask anything")
-        user_input = st.text_area("Ask anything")
+        user_input = st.text_area("Ask anything",placeholder="Ask any doubt💬❓",label_visibility="hidden")
 
         # Display submit button
         if st.button("Response"):
