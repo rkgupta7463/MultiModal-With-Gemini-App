@@ -29,8 +29,8 @@ def main():
     option = st.sidebar.selectbox(
             "How would you like to be proceed?",
             ("Text", "Image", "Audio"),
-            index=None,
-            placeholder="Select process method...",
+            # index=None,
+            # placeholder="Select process method...",
             )
     
     # Get user input
