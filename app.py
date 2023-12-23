@@ -41,7 +41,7 @@ def main():
         # Display submit button
         if st.button("Response"):
             # Process the input when the button is clicked
-            st.success(f"Your Asked question: {user_input}")
+            st.success(f"Your Asked question: {user_input[:100]}(..........)")
 
             if user_input is not None:
                 with st.spinner("Wait for process........"):
