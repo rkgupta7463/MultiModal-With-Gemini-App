@@ -85,26 +85,26 @@ def main():
         else:
             st.image("https://www.datasciencecentral.com/wp-content/uploads/2023/10/AdobeStock_611053470.jpeg",caption="GenAI Generation")
 
-        elif option == "Camera":
-            image = None
-            prompt=None
-            prompt=st.text_input(label="what do you want with image to ask a question?(optional)")
-            pic_clicked = st.camera_input("Click a photo!")
-            
-            if pic_clicked:
-                image = Image.open(pic_clicked)
-    
-                if image:
-                    # Display submit button
-                    if st.button("Tell me about this image!"):  
-                        # Draw a horizontal line
-                        st.markdown('<hr style="border:2px solid #3498db; background-color:#3498db;"/>', unsafe_allow_html=True)
-                        if prompt is not None and image is not None:
-                            with st.spinner("Wait for process........"):
-                                time.sleep(1) 
-                                result_text=img_response(img=image,prompt=prompt)
-                                if result_text:
-                                    st.write(result_text) 
+    elif option == "Camera":
+        image = None
+        prompt=None
+        prompt=st.text_input(label="what do you want with image to ask a question?(optional)")
+        pic_clicked = st.camera_input("Click a photo!")
+        
+        if pic_clicked:
+            image = Image.open(pic_clicked)
+
+            if image:
+                # Display submit button
+                if st.button("Tell me about this image!"):  
+                    # Draw a horizontal line
+                    st.markdown('<hr style="border:2px solid #3498db; background-color:#3498db;"/>', unsafe_allow_html=True)
+                    if prompt is not None and image is not None:
+                        with st.spinner("Wait for process........"):
+                            time.sleep(1) 
+                            result_text=img_response(img=image,prompt=prompt)
+                            if result_text:
+                                st.write(result_text) 
     elif option=="Audio":
         audio_file = st.file_uploader("Choose an MP3 file", type=["mp3"])
         if audio_file:
